@@ -446,7 +446,7 @@
             font-weight: 300;
             line-height: 1.7;
             letter-spacing: 0.5px;
-            }
+        }
 
         .premium-policy-memo strong {
             color: var(--luxury-gold);
@@ -654,11 +654,13 @@
             border: 1px solid rgba(197, 168, 128, 0.15);
             padding: 15px;
             background: rgba(255, 255, 255, 0.01);
+            cursor: pointer;
         }
 
         .map-frame-wrapper iframe {
             filter: grayscale(1) invert(0.9) contrast(1.2);
             transition: var(--transition);
+            pointer-events: none; /* Allows the anchor link to trigger smoothly on click */
         }
 
         .map-frame-wrapper:hover iframe {
@@ -973,12 +975,13 @@
                     </div>
                 </div>
 
-                <div class="map-frame-wrapper">
+                <!-- Integrated Luxury Anchor Link Container Wrapping the Map Component -->
+                <a href="https://maps.app.goo.gl/nDWkybBBSFs2AHUU6" target="_blank" class="map-frame-wrapper" title="Open Hotel Om Palace directly in Google Maps">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.9168478496464!2d69.33621419999999!3d22.8601449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39512530d9cb5ab3%3A0xc3f1fdfce7fb9dbf!2sOm%20palace!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.921387600741!2d69.33615967606771!3d22.860010979286827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39512530d9cb5ab3%3A0xc3f1fdfce7fb9dbf!2sOm%20palace!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin" 
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
-                </div>
+                </a>
 
             </div>
         </section>
@@ -1076,5 +1079,5 @@
         });
     </script>
 </body>
-</html>
+    </html>
 
