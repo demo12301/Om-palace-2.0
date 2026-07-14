@@ -263,7 +263,7 @@
             text-align: center;
             font-size: 56px;
             color: var(--text-light);
-            margin-bottom: 90px;
+            margin-bottom: 25px;
             letter-spacing: 2px;
         }
 
@@ -276,6 +276,16 @@
             letter-spacing: 7px;
             margin-bottom: 15px;
             font-weight: 500;
+        }
+
+        .section-subtitle-pricing {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--luxury-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 95px;
         }
 
         /* --- CINEMATIC HERO BLOCK WITH HOTEL FRONT VIEW --- */
@@ -365,33 +375,8 @@
         .room-row-details h4 {
             font-size: 46px;
             color: var(--text-light);
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .room-rates-panel {
             margin-bottom: 25px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .room-price-tag {
-            font-size: 26px;
-            font-family: 'Cormorant Garamond', serif;
-            color: var(--luxury-gold);
-            font-weight: 400;
-            letter-spacing: 1px;
             line-height: 1.2;
-        }
-
-        .room-price-tag span {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 11px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-left: 8px;
         }
 
         .room-description {
@@ -704,7 +689,8 @@
             .room-row-img { height: 420px; }
             .photo-gallery-layout { grid-template-columns: repeat(2, 1fr); }
             .contact-split-grid { grid-template-columns: 1fr; gap: 60px; }
-            .section-title { font-size: 44px; margin-bottom: 60px; }
+            .section-title { font-size: 44px; margin-bottom: 15px; }
+            .section-subtitle-pricing { margin-bottom: 60px; }
         }
 
         @media (max-width: 768px) {
@@ -770,6 +756,8 @@
         <!-- Premium Editorial Suites Showcase Section -->
         <section class="section-padding container">
             <h3 class="section-title"><span>Exquisite Sanctuary</span>Sanctuary & Suites</h3>
+            <div class="section-subtitle-pricing">Luxury Accommodations from ₹1,500 – ₹3,500 / Night</div>
+            
             <div class="room-showcase-grid">
                 
                 <!-- Luxury Row Suite 1 -->
@@ -779,10 +767,7 @@
                     </div>
                     <div class="room-row-details">
                         <h4>Deluxe AC Room</h4>
-                        <div class="room-rates-panel">
-                            <div class="room-price-tag">₹3,500 <span>/ Night (2 Persons)</span></div>
-                        </div>
-                        <p class="room-description">Meticulously curated space offering custom premium air conditioning, fine linens, and a dedicated layout. Tailored for corporate travelers and couples who demand precision and comfort.</p>
+                        <p class="room-description">Meticulously curated space offering custom premium air conditioning, fine linens, and a dedicated layout. Tailored for corporate travelers and couples who demand precision and absolute comfort.</p>
                         <div class="room-amenities-row">
                             <span><i class="fas fa-snowflake"></i> Climate Control</span>
                             <span><i class="fas fa-wifi"></i> Ultra-Fast Wi-Fi</span>
@@ -799,10 +784,7 @@
                     </div>
                     <div class="room-row-details">
                         <h4>Standard Normal Room</h4>
-                        <div class="room-rates-panel">
-                            <div class="room-price-tag">₹1,500 <span>/ Night (2 Persons)</span></div>
-                        </div>
-                        <p class="room-description">A thoughtful premium space optimized with clean amenities, top-tier bedding fabrics, and sleek modern architecture. Ideal for minimalist travelers who appreciate heritage aesthetics and functional layout layouts.</p>
+                        <p class="room-description">A thoughtful premium space optimized with clean amenities, top-tier bedding fabrics, and sleek modern architecture. Ideal for minimalist travelers who appreciate premium heritage aesthetics and functional layout configurations.</p>
                         <div class="room-amenities-row">
                             <span><i class="fas fa-wind"></i> Natural Ventilation</span>
                             <span><i class="fas fa-wifi"></i> High Bandwidth Wi-Fi</span>
@@ -819,10 +801,7 @@
                     </div>
                     <div class="room-row-details">
                         <h4>Executive Deluxe Room</h4>
-                        <div class="room-rates-panel">
-                            <div class="room-price-tag">₹1,500 – ₹3,500 <span>/ Night (2 Persons)</span></div>
-                        </div>
-                        <p class="room-description">An expansive multiline sanctuary built to accommodate guests cleanly with high-performance cooling layout configuration frameworks. Featuring elegant lounge space accents, minimal architecture walls, and custom bespoke lighting configurations.</p>
+                        <p class="room-description">An expansive multiline sanctuary built to accommodate guests cleanly with high-performance cooling layout configurations. Featuring elegant lounge space accents, minimal architecture walls, and custom bespoke ambient lighting configurations.</p>
                         <div class="room-amenities-row">
                             <span><i class="fas fa-users"></i> Royal Space</span>
                             <span><i class="fas fa-snowflake"></i> Precise Cooling Grid</span>
@@ -865,9 +844,9 @@
                                 <label>Room Types</label>
                                 <select id="roomSelected" onchange="toggleCustomRoomField()" required>
                                     <option value="" disabled selected>Select room type...</option>
-                                    <option value="Deluxe AC Room">Deluxe AC Room (₹3,500)</option>
-                                    <option value="Standard Normal Room">Standard Normal Room (₹1,500)</option>
-                                    <option value="Executive Deluxe Room">Executive Deluxe Room (₹1,500 – ₹3,500)</option>
+                                    <option value="Deluxe AC Room">Deluxe AC Room</option>
+                                    <option value="Standard Normal Room">Standard Normal Room</option>
+                                    <option value="Executive Deluxe Room">Executive Deluxe Room</option>
                                     <option value="Custom Room Choice">Custom / Other Requirements...</option>
                                 </select>
                             </div>
@@ -1098,6 +1077,4 @@
         });
     </script>
 </body>
-    </html>
-
-
+</html>
