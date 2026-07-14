@@ -369,13 +369,20 @@
             line-height: 1.2;
         }
 
+        .room-rates-panel {
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
         .room-price-tag {
-            font-size: 28px;
+            font-size: 26px;
             font-family: 'Cormorant Garamond', serif;
             color: var(--luxury-gold);
-            margin-bottom: 25px;
             font-weight: 400;
             letter-spacing: 1px;
+            line-height: 1.2;
         }
 
         .room-price-tag span {
@@ -431,11 +438,41 @@
             border: 1px solid rgba(197, 168, 128, 0.15);
         }
 
+        /* PREMIUM POLICY MEMO CARD */
+        .premium-policy-memo {
+            background: rgba(197, 168, 128, 0.05);
+            border-left: 2px solid var(--luxury-gold);
+            padding: 20px 25px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .premium-policy-memo i {
+            color: var(--luxury-gold);
+            font-size: 18px;
+            margin-top: 3px;
+        }
+
+        .premium-policy-memo p {
+            font-size: 13px;
+            color: #e2e8f0;
+            font-weight: 300;
+            line-height: 1.7;
+            letter-spacing: 0.5px;
+        }
+
+        .premium-policy-memo strong {
+            color: var(--luxury-gold);
+            font-weight: 500;
+        }
+
         .form-layout-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .span-full-row {
@@ -483,6 +520,14 @@
             height: 90px;
         }
 
+        /* DUAL ACTION BUTTON GROUP */
+        .booking-actions-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
         .whatsapp-submit-btn {
             background: var(--luxury-gold);
             color: var(--luxury-dark);
@@ -521,6 +566,31 @@
 
         .whatsapp-submit-btn:hover::after {
             transform: scaleY(1);
+        }
+
+        .call-submit-btn {
+            background: transparent;
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            width: 100%;
+            padding: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .call-submit-btn:hover {
+            border-color: var(--luxury-gold);
+            color: var(--luxury-gold);
+            background: rgba(197, 168, 128, 0.02);
         }
 
         /* --- PRESTIGE MOSAIC GALLERY SYSTEM --- */
@@ -709,7 +779,9 @@
                     </div>
                     <div class="room-row-details">
                         <h4>Deluxe AC Room</h4>
-                        <div class="room-price-tag">₹4,200 <span>/ Night</span></div>
+                        <div class="room-rates-panel">
+                            <div class="room-price-tag">₹2,000 <span>/ Night (2 Persons)</span></div>
+                        </div>
                         <p class="room-description">Meticulously curated space offering custom premium air conditioning, fine linens, and a dedicated layout. Tailored for corporate travelers and couples who demand precision and comfort.</p>
                         <div class="room-amenities-row">
                             <span><i class="fas fa-snowflake"></i> Climate Control</span>
@@ -727,10 +799,12 @@
                     </div>
                     <div class="room-row-details">
                         <h4>Premium Family Deluxe AC Suite</h4>
-                        <div class="room-price-tag">₹5,800 <span>/ Night</span></div>
-                        <p class="room-description">An expansive multiline sanctuary built to accommodate families up to 4 guests cleanly with full high-performance cooling. Featuring an elegant lounge seating space, architectural accent walls, and majestic lighting installations.</p>
+                        <div class="room-rates-panel">
+                            <div class="room-price-tag">₹2,000 <span>/ Night (2 Persons)</span></div>
+                        </div>
+                        <p class="room-description">An expansive multiline sanctuary built to accommodate families cleanly with full high-performance cooling. Featuring an elegant lounge seating space, architectural accent walls, and majestic lighting installations.</p>
                         <div class="room-amenities-row">
-                            <span><i class="fas fa-users"></i> 4 Royal Guests</span>
+                            <span><i class="fas fa-users"></i> Royal Space</span>
                             <span><i class="fas fa-snowflake"></i> Master AC Zone</span>
                             <span><i class="fas fa-couch"></i> Lounge Sofa</span>
                         </div>
@@ -745,7 +819,9 @@
                     </div>
                     <div class="room-row-details">
                         <h4>Executive Deluxe AC Room</h4>
-                        <div class="room-price-tag">₹4,900 <span>/ Night</span></div>
+                        <div class="room-rates-panel">
+                            <div class="room-price-tag">₹2,000 <span>/ Night (2 Persons)</span></div>
+                        </div>
                         <p class="room-description">A thoughtful premium space optimized with centralized climate controls, top-tier bedding fabrics, and sleek modern architecture. Ideal for travelers who appreciate minimalism and premium heritage aesthetics.</p>
                         <div class="room-amenities-row">
                             <span><i class="fas fa-snowflake"></i> Premium AC Grid</span>
@@ -764,6 +840,13 @@
             <div class="container">
                 <h3 class="section-title"><span>Secure Placement</span>Bespoke Reservation</h3>
                 <div class="booking-console-box">
+                    
+                    <!-- Prestige Premium Verification Policy Announcement Block -->
+                    <div class="premium-policy-memo">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Reservation Protocol:</strong> To secure and finalize your luxury block or suite package via WhatsApp instant sync, a <strong>50% advance payment</strong> deposit is mandatory. Following prompt message submission, please execute a brief validation voice call to our management desk to confirm room allocation mapping.</p>
+                    </div>
+
                     <form id="resortWhatsAppForm">
                         <div class="form-layout-grid">
                             <div class="control-group span-full-row">
@@ -824,10 +907,15 @@
                                 <textarea id="specialNotes" placeholder="Any extra details, customized group counts, or general custom requests..."></textarea>
                             </div>
                         </div>
-                        <div class="span-full-row">
+                        
+                        <!-- Dual Action Button Stack -->
+                        <div class="span-full-row booking-actions-group">
                             <button type="submit" class="whatsapp-submit-btn">
                                 <i class="fab fa-whatsapp"></i> Request Reservation via WhatsApp
                             </button>
+                            <a href="tel:+919825325189" class="call-submit-btn">
+                                <i class="fas fa-phone-alt"></i> Call Reservation Desk Direct
+                            </a>
                         </div>
                     </form>
                 </div>
@@ -996,16 +1084,19 @@
                 room = customDesc ? `Custom Choice (${customDesc})` : "Custom Requirement Selection";
             }
 
-            // Premium Hotel Text Formatting
+            // Premium Hotel Text Formatting with Payment/Call Policy notice included in string
             let dynamicMessage = `Om Palace Mandvi - Booking Request%0A%0A• Guest Name: ${encodeURIComponent(name)}%0A• Room Type: ${encodeURIComponent(room)}%0A• Rooms Required: ${encodeURIComponent(roomsCount)}%0A• Check-In Date: ${encodeURIComponent(inDate)}%0A• Check-Out Date: ${encodeURIComponent(outDate)}%0A• Adults Count: ${encodeURIComponent(adults)}%0A• Children Count: ${encodeURIComponent(children)}`;
             
             if(notes) {
                 dynamicMessage += `%0A• Requirements Note: ${encodeURIComponent(notes)}`;
             }
+
+            dynamicMessage += `%0A%0A*Note:* I understand that a 50% advance payment is required to finalize this booking and I will follow up with a verification call.`;
             
             const targetOperationsNumber = "919825325189"; 
             window.open(`https://wa.me/${targetOperationsNumber}?text=${dynamicMessage}`, '_blank');
         });
     </script>
 </body>
-</html>
+    </html>
+
