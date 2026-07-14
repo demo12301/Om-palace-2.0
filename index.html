@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Palace Mandvi | Ultra-Luxury Boutique Hotel</title>
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Editorial Luxury Serif & Clean Modern Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 5-STAR LUXURY DESIGN SYSTEM --- */
+        :root {
+            --luxury-gold: #c5a880;     /* Refined Champagne Gold */
+            --luxury-gold-hover: #b39369;
+            --luxury-dark: #090c0f;     /* Rich Obsidian Deep Onyx */
+            --luxury-slate: #11161d;    /* Sleek Editorial Charcoal */
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+            --success: #25d366;
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--luxury-dark);
+            color: var(--text-light);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .serif-font {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* --- IMMERSIVE CUSTOM SCROLLBAR --- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--luxury-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--luxury-gold);
+        }
+
+        /* --- PRESTIGE NAVIGATION BAR --- */
+        header {
+            background: rgba(9, 12, 15, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(197, 168, 128, 0.12);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+        }
+
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .brand-title {
+            font-size: 30px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .logo-area span {
+            font-size: 9px;
+            color: var(--luxury-gold);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-top: 6px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 8px 0;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--luxury-gold);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--luxury-gold);
+            transition: var(--transition);
+        }
+
+        nav ul li a.active::after, nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .header-insta-icon {
+            color: var(--text-muted);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .header-insta-icon:hover {
+            color: var(--luxury-gold);
+        }
+
+        /* --- 5-STAR ANIMATED INTERACTION BUTTONS --- */
+        .prestige-btn {
+            background: transparent;
+            color: var(--luxury-gold);
+            padding: 14px 32px;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 1px solid var(--luxury-gold);
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .prestige-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--luxury-gold);
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .prestige-btn:hover {
+            color: var(--luxury-dark);
+        }
+
+        .prestige-btn:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* --- DUAL FLOATING ACTIONS COMPONENT --- */
+        .floating-actions {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .float-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--luxury-dark);
+            font-size: 18px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            transition: var(--transition);
+        }
+
+        .float-btn.call-action {
+            background: var(--luxury-gold);
+            color: var(--luxury-dark);
+        }
+
+        .float-btn.whatsapp-action {
+            background: rgba(37, 211, 102, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(37, 211, 102, 0.4);
+            color: var(--success);
+        }
+
+        .float-btn:hover {
+            transform: translateY(-8px);
+        }
+
+        /* --- APP STRUCTURE CONFIGURATION --- */
+        .page-view {
+            display: none;
+        }
+
+        .page-view.active-view {
+            display: block;
+            animation: fadeInView 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInView {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-padding {
+            padding: 140px 40px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 56px;
+            color: var(--text-light);
+            margin-bottom: 90px;
+            letter-spacing: 2px;
+        }
+
+        .section-title span {
+            display: block;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--luxury-gold);
+            letter-spacing: 7px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        /* --- CINEMATIC HERO BLOCK WITH HOTEL FRONT VIEW --- */
+        .hero-showcase {
+            background: linear-gradient(rgba(9, 12, 15, 0.4), rgba(9, 12, 15, 0.98)), url('hotel.jpg') center/cover no-repeat;
+            height: 92vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero-content h2 {
+            font-size: 84px;
+            line-height: 1.15;
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 50px auto;
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        .hero-reserve-btn {
+            background: var(--luxury-gold);
+            color: var(--luxury-dark);
+        }
+        .hero-reserve-btn:hover {
+            background: transparent;
+            color: var(--luxury-gold);
+        }
+        .hero-reserve-btn::after {
+            background: var(--luxury-dark);
+        }
+
+        /* --- FINE ART EDITORIAL SUITES LAYOUT --- */
+        .room-showcase-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 140px;
+            margin-top: 40px;
+        }
+
+        .room-luxury-row {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .room-luxury-row:nth-child(even) {
+            direction: rtl;
+        }
+        .room-luxury-row:nth-child(even) .room-row-details {
+            direction: ltr;
+        }
+
+        .room-img-wrapper {
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(197, 168, 128, 0.1);
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .room-row-img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.9);
+            transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), filter 1.8s ease;
+        }
+
+        .room-img-wrapper:hover .room-row-img {
+            transform: scale(1.06);
+            filter: brightness(1);
+        }
+
+        .room-row-details h4 {
+            font-size: 46px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .room-price-tag {
+            font-size: 28px;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--luxury-gold);
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .room-price-tag span {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-left: 8px;
+        }
+
+        .room-description {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 35px;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        .room-amenities-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            color: var(--text-light);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 45px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 30px;
+        }
+
+        .room-amenities-row span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 300;
+        }
+
+        .room-amenities-row i {
+            color: var(--luxury-gold);
+            font-size: 14px;
+        }
+
+        /* --- AMBIENT GLASS BOOKING ARC --- */
+        .booking-console-box {
+            background: rgba(17, 22, 29, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px;
+            border: 1px solid rgba(197, 168, 128, 0.15);
+        }
+
+        .form-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .span-full-row {
+            grid-column: span 2;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .control-group label {
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var(--luxury-gold);
+            letter-spacing: 3px;
+        }
+
+        .control-group input, .control-group select, .control-group textarea {
+            width: 100%;
+            padding: 16px 5px;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 15px;
+            color: var(--text-light);
+            background: transparent;
+            outline: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: var(--transition);
+        }
+
+        .control-group input:focus, .control-group select:focus, .control-group textarea:focus {
+            border-bottom-color: var(--luxury-gold);
+        }
+
+        .control-group select option {
+            background: var(--luxury-slate);
+            color: var(--text-light);
+        }
+
+        .control-group textarea {
+            resize: none;
+            height: 90px;
+        }
+
+        .whatsapp-submit-btn {
+            background: var(--luxury-gold);
+            color: var(--luxury-dark);
+            width: 100%;
+            padding: 22px;
+            border: none;
+            border-radius: 0;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .whatsapp-submit-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--luxury-gold-hover);
+            z-index: -1;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .whatsapp-submit-btn:hover::after {
+            transform: scaleY(1);
+        }
+
+        /* --- PRESTIGE MOSAIC GALLERY SYSTEM --- */
+        .photo-gallery-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .gallery-photo-item {
+            height: 380px;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.75) contrast(1.05);
+            border: 1px solid rgba(197, 168, 128, 0.08);
+            transition: var(--transition);
+        }
+
+        .gallery-photo-item:hover {
+            filter: brightness(1) contrast(1);
+            transform: translateY(-5px);
+            border-color: var(--luxury-gold);
+        }
+
+        /* --- MINIMALIST EDITORIAL CONTACT DESK --- */
+        .contact-split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 120px;
+            align-items: center;
+        }
+
+        .contact-info-panel h4 {
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .metric-row {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 45px;
+        }
+
+        .metric-row i {
+            color: var(--luxury-gold);
+            font-size: 20px;
+            margin-top: 6px;
+        }
+
+        .metric-details h5 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--luxury-gold);
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .metric-details p, .metric-details a {
+            font-size: 16px;
+            color: var(--text-muted);
+            font-weight: 300;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .metric-details a:hover {
+            color: var(--luxury-gold);
+        }
+
+        .map-frame-wrapper {
+            height: 520px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .map-frame-wrapper iframe {
+            filter: grayscale(1) invert(0.9) contrast(1.2);
+            transition: var(--transition);
+        }
+
+        .map-frame-wrapper:hover iframe {
+            filter: grayscale(0.2) invert(0);
+        }
+
+        /* --- DIGNIFIED FOOTER --- */
+        footer {
+            background: #05070a;
+            color: var(--text-muted);
+            padding: 50px 40px;
+            text-align: center;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-top: 1px solid rgba(197, 168, 128, 0.12);
+        }
+
+        /* --- RESPONSIVE 5-STAR ADAPTATIONS --- */
+        @media (max-width: 1200px) {
+            .room-luxury-row { gap: 50px; }
+            .contact-split-grid { gap: 60px; }
+        }
+
+        @media (max-width: 992px) {
+            .room-luxury-row { grid-template-columns: 1fr; gap: 40px; }
+            .room-luxury-row:nth-child(even) { direction: ltr; }
+            .room-row-img { height: 420px; }
+            .photo-gallery-layout { grid-template-columns: repeat(2, 1fr); }
+            .contact-split-grid { grid-template-columns: 1fr; gap: 60px; }
+            .section-title { font-size: 44px; margin-bottom: 60px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 25px; padding: 20px; }
+            nav ul { gap: 30px; }
+            .hero-showcase { height: 80vh; }
+            .hero-content h2 { font-size: 46px; }
+            .form-layout-grid { grid-template-columns: 1fr; gap: 30px; }
+            .span-full-row { grid-column: span 1; }
+            .booking-console-box { padding: 40px 24px; }
+            .photo-gallery-layout { grid-template-columns: 1fr; }
+            .section-padding { padding: 80px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- PRESTIGE GLOBAL NAVBAR --- -->
+    <header>
+        <div class="nav-container">
+            <a onclick="navigateApp('home-view')" class="logo-area" href="#">
+                <h1 class="brand-title">Om Palace</h1>
+                <span>Mandvi Luxury Hotel</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a onclick="navigateApp('home-view')" id="nav-home-view" class="active">Home</a></li>
+                    <li><a onclick="navigateApp('gallery-view')" id="nav-gallery-view">Gallery</a></li>
+                    <li><a onclick="navigateApp('contact-view')" id="nav-contact-view">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions-wrapper">
+                <a href="https://www.instagram.com/hotelompalace?igsh=ajg3Zmxva2xlOTRi&utm_source=qr" target="_blank" class="header-insta-icon" title="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <button class="prestige-btn" onclick="scrollToBookingForm()">Book A Suite</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- --- DUAL FLOATING PRESTIGE ACTIONS (PHONE + WHATSAPP) --- -->
+    <div class="floating-actions">
+        <a href="tel:+919825325189" class="float-btn call-action" title="Call Reservations Desk">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/919825325189" target="_blank" class="float-btn whatsapp-action" title="Chat via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: HOME PANEL VIEW -->
+    <!-- ========================================== -->
+    <main id="home-view" class="page-view active-view">
+        <section class="hero-showcase">
+            <div class="hero-content">
+                <h2>The Art of Luxury Living</h2>
+                <p>Immerse yourself in world-class architecture, refined amenities, and absolute coastal serenity in Mandvi, Kutch.</p>
+                <button class="prestige-btn hero-reserve-btn" onclick="scrollToBookingForm()">Reserve Experience</button>
+            </div>
+        </section>
+
+        <!-- Premium Editorial Suites Showcase Section -->
+        <section class="section-padding container">
+            <h3 class="section-title"><span>Exquisite Sanctuary</span>Sanctuary & Suites</h3>
+            <div class="room-showcase-grid">
+                
+                <!-- Luxury Row Suite 1 -->
+                <div class="room-luxury-row">
+                    <div class="room-img-wrapper">
+                        <img src="bedroom1.jpg" alt="Deluxe AC Room Suite" class="room-row-img">
+                    </div>
+                    <div class="room-row-details">
+                        <h4>Deluxe AC Room</h4>
+                        <div class="room-price-tag">₹4,200 <span>/ Night</span></div>
+                        <p class="room-description">Meticulously curated space offering custom premium air conditioning, fine linens, and a dedicated layout. Tailored for corporate travelers and couples who demand precision and comfort.</p>
+                        <div class="room-amenities-row">
+                            <span><i class="fas fa-snowflake"></i> Climate Control</span>
+                            <span><i class="fas fa-wifi"></i> Ultra-Fast Wi-Fi</span>
+                            <span><i class="fas fa-tv"></i> Smart TV Array</span>
+                        </div>
+                        <button class="prestige-btn" onclick="captureSelection('Deluxe AC Room')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- Luxury Row Suite 2 -->
+                <div class="room-luxury-row">
+                    <div class="room-img-wrapper">
+                        <img src="bedroom5.jpg" alt="Premium Family Deluxe AC Suite" class="room-row-img">
+                    </div>
+                    <div class="room-row-details">
+                        <h4>Premium Family Deluxe AC Suite</h4>
+                        <div class="room-price-tag">₹5,800 <span>/ Night</span></div>
+                        <p class="room-description">An expansive multiline sanctuary built to accommodate families up to 4 guests cleanly with full high-performance cooling. Featuring an elegant lounge seating space, architectural accent walls, and majestic lighting installations.</p>
+                        <div class="room-amenities-row">
+                            <span><i class="fas fa-users"></i> 4 Royal Guests</span>
+                            <span><i class="fas fa-snowflake"></i> Master AC Zone</span>
+                            <span><i class="fas fa-couch"></i> Lounge Sofa</span>
+                        </div>
+                        <button class="prestige-btn" onclick="captureSelection('Premium Family Deluxe AC Suite')">Book Suite</button>
+                    </div>
+                </div>
+
+                <!-- Luxury Row Suite 3 -->
+                <div class="room-luxury-row">
+                    <div class="room-img-wrapper">
+                        <img src="bedroom9.jpg" alt="Executive Deluxe AC Room" class="room-row-img">
+                    </div>
+                    <div class="room-row-details">
+                        <h4>Executive Deluxe AC Room</h4>
+                        <div class="room-price-tag">₹4,900 <span>/ Night</span></div>
+                        <p class="room-description">A thoughtful premium space optimized with centralized climate controls, top-tier bedding fabrics, and sleek modern architecture. Ideal for travelers who appreciate minimalism and premium heritage aesthetics.</p>
+                        <div class="room-amenities-row">
+                            <span><i class="fas fa-snowflake"></i> Premium AC Grid</span>
+                            <span><i class="fas fa-wifi"></i> High Bandwidth Wi-Fi</span>
+                            <span><i class="fas fa-bed"></i> Organic Cotton Linens</span>
+                        </div>
+                        <button class="prestige-btn" onclick="captureSelection('Executive Deluxe AC Room')">Book Suite</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Reservation Interface Module Console -->
+        <section class="section-padding" id="booking-console-anchor" style="background-color: var(--luxury-slate); border-top: 1px solid rgba(197, 168, 128, 0.12);">
+            <div class="container">
+                <h3 class="section-title"><span>Secure Placement</span>Bespoke Reservation</h3>
+                <div class="booking-console-box">
+                    <form id="resortWhatsAppForm">
+                        <div class="form-layout-grid">
+                            <div class="control-group span-full-row">
+                                <label>Guest Full Name</label>
+                                <input type="text" id="guestName" required placeholder="Enter full name">
+                            </div>
+                            <div class="control-group">
+                                <label>Check-In Arrival</label>
+                                <input type="date" id="checkIn" required>
+                            </div>
+                            <div class="control-group">
+                                <label>Check-Out Departure</label>
+                                <input type="date" id="checkOut" required>
+                            </div>
+                            <div class="control-group">
+                                <label>Room Types</label>
+                                <select id="roomSelected" onchange="toggleCustomRoomField()" required>
+                                    <option value="" disabled selected>Select room type...</option>
+                                    <option value="Deluxe AC Room">Deluxe AC Room</option>
+                                    <option value="Premium Family Deluxe AC Suite">Premium Family Deluxe AC Suite</option>
+                                    <option value="Executive Deluxe AC Room">Executive Deluxe AC Room</option>
+                                    <option value="Custom Room Choice">Custom / Other Requirements...</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label>Total Rooms Required</label>
+                                <select id="roomCount" required>
+                                    <option value="1 Room" selected>1 Room</option>
+                                    <option value="2 Rooms">2 Rooms</option>
+                                    <option value="3 Rooms">3 Rooms</option>
+                                    <option value="4+ Rooms / Group Block">4+ Rooms / Group Block</option>
+                                </select>
+                            </div>
+                            <div class="control-group span-full-row" id="customRoomWrapper" style="display: none;">
+                                <label>Describe Your Room Requirement</label>
+                                <input type="text" id="customRoomText" placeholder="e.g., Sea view option, Interconnected rooms">
+                            </div>
+                            <div class="control-group">
+                                <label>Total Adults</label>
+                                <select id="guestCount" required>
+                                    <option value="1 Adult">1 Adult</option>
+                                    <option value="2 Adults" selected>2 Adults</option>
+                                    <option value="3 Adults">3 Adults</option>
+                                    <option value="4+ Adults Group">4+ Adults Group</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label>Children Allocation</label>
+                                <select id="childCount" required>
+                                    <option value="No Children" selected>No Children</option>
+                                    <option value="1 Child">1 Child</option>
+                                    <option value="2 Children">2 Children</option>
+                                    <option value="3+ Children">3+ Children</option>
+                                </select>
+                            </div>
+                            <div class="control-group span-full-row">
+                                <label>Special Travel Requests (Optional)</label>
+                                <textarea id="specialNotes" placeholder="Any extra details, customized group counts, or general custom requests..."></textarea>
+                            </div>
+                        </div>
+                        <div class="span-full-row">
+                            <button type="submit" class="whatsapp-submit-btn">
+                                <i class="fab fa-whatsapp"></i> Request Reservation via WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: IMAGE SHOWCASE PANEL -->
+    <!-- ========================================== -->
+    <main id="gallery-view" class="page-view">
+        <section class="section-padding container">
+            <h3 class="section-title"><span>Gallery of Luxury</span>Our Room Visuals</h3>
+            <div class="photo-gallery-layout">
+                <img src="bedroom1.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom2.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom3.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom4.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom5.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom6.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom7.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom8.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="bedroom9.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="helpdesk1.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="helpdesk2.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="tv1.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="tv2.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="tv3.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="tv4.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="tv5.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+                <img src="tv6.jpg" alt="Om Palace Showcase" class="gallery-photo-item">
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: SYSTEM CONTEXT MAP VIEW -->
+    <!-- ========================================== -->
+    <main id="contact-view" class="page-view">
+        <section class="section-padding container">
+            <h3 class="section-title"><span>Location Architecture</span>Room Inquiries</h3>
+            <div class="contact-split-grid">
+                
+                <div class="contact-info-panel">
+                    <h4>Management Desk</h4>
+                    
+                    <div class="metric-row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="metric-details">
+                            <h5>Physical Coordinates</h5>
+                            <p>Plot no 25, Octroi, opp. Maska, Gala Nagar, Mandvi, Gujarat 370465</p>
+                        </div>
+                    </div>
+
+                    <div class="metric-row">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="metric-details">
+                            <h5>Voice Communications</h5>
+                            <p>+91 98253 25189</p>
+                        </div>
+                    </div>
+
+                    <div class="metric-row">
+                        <i class="fas fa-envelope"></i>
+                        <div class="metric-details">
+                            <h5>Digital Mailing Inbox</h5>
+                            <a href="mailto:cbnathani5@gmail.com">cbnathani5@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="metric-row">
+                        <i class="fab fa-instagram"></i>
+                        <div class="metric-details">
+                            <h5>Official Instagram</h5>
+                            <a href="https://www.instagram.com/hotelompalace?igsh=ajg3Zmxva2xlOTRi&utm_source=qr" target="_blank">@hotelompalace</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-frame-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.9168478496464!2d69.33621419999999!3d22.8601449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39512530d9cb5ab3%3A0xc3f1fdfce7fb9dbf!2sOm%20palace!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- --- FOOTER --- -->
+    <footer>
+        &copy; 2026 Om Palace Mandvi. Crafted for absolute distinction.
+    </footer>
+
+    <!-- --- LUXURY INTERACTIVE ROUTING CONTROLS --- -->
+    <script>
+        // Enforce structural check rules on the calendars
+        window.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('checkIn').min = today;
+            document.getElementById('checkOut').min = today;
+        });
+
+        // Toggle custom description input box if custom room choice is active
+        function toggleCustomRoomField() {
+            const selectValue = document.getElementById('roomSelected').value;
+            const targetWrapper = document.getElementById('customRoomWrapper');
+            if(selectValue === "Custom Room Choice") {
+                targetWrapper.style.display = "flex";
+            } else {
+                targetWrapper.style.display = "none";
+            }
+        }
+
+        // Application View Switching Engine
+        function navigateApp(targetId) {
+            const panels = document.querySelectorAll('.page-view');
+            panels.forEach(panel => panel.classList.remove('active-view'));
+            
+            document.getElementById(targetId).classList.add('active-view');
+            
+            const tabs = document.querySelectorAll('nav ul li a');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            const currentActiveTab = document.getElementById('nav-' + targetId);
+            if(currentActiveTab) currentActiveTab.classList.add('active');
+
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function scrollToBookingForm() {
+            navigateApp('home-view');
+            setTimeout(() => {
+                document.getElementById('booking-console-anchor').scrollIntoView({behavior: 'smooth'});
+            }, 150);
+        }
+
+        function captureSelection(roomName) {
+            document.getElementById('roomSelected').value = roomName;
+            toggleCustomRoomField();
+            document.getElementById('booking-console-anchor').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // WhatsApp Custom Form Payload Link Encoder
+        document.getElementById('resortWhatsAppForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('guestName').value.trim();
+            const inDate = document.getElementById('checkIn').value;
+            const outDate = document.getElementById('checkOut').value;
+            let room = document.getElementById('roomSelected').value;
+            const roomsCount = document.getElementById('roomCount').value;
+            const adults = document.getElementById('guestCount').value;
+            const children = document.getElementById('childCount').value;
+            const notes = document.getElementById('specialNotes').value.trim();
+
+            if (new Date(inDate) >= new Date(outDate)) {
+                alert("Departure parameters must sit on a chronological timestamp after the arrival target.");
+                return;
+            }
+
+            // Append custom room inputs if active
+            if(room === "Custom Room Choice") {
+                const customDesc = document.getElementById('customRoomText').value.trim();
+                room = customDesc ? `Custom Choice (${customDesc})` : "Custom Requirement Selection";
+            }
+
+            // Premium Hotel Text Formatting
+            let dynamicMessage = `Om Palace Mandvi - Booking Request%0A%0A• Guest Name: ${encodeURIComponent(name)}%0A• Room Type: ${encodeURIComponent(room)}%0A• Rooms Required: ${encodeURIComponent(roomsCount)}%0A• Check-In Date: ${encodeURIComponent(inDate)}%0A• Check-Out Date: ${encodeURIComponent(outDate)}%0A• Adults Count: ${encodeURIComponent(adults)}%0A• Children Count: ${encodeURIComponent(children)}`;
+            
+            if(notes) {
+                dynamicMessage += `%0A• Requirements Note: ${encodeURIComponent(notes)}`;
+            }
+            
+            const targetOperationsNumber = "919825325189"; 
+            window.open(`https://wa.me/${targetOperationsNumber}?text=${dynamicMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
